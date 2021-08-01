@@ -1,0 +1,12 @@
+-----------  Configuration Arguments -----------
+current_node_ip: 172.17.0.2
+log_prefix: 
+node_id: 0
+node_ips: 172.17.0.2
+print_config: True
+split_log_path: log
+training_script: ./run_seq2seq.py
+training_script_args: ['--use_cuda', 'false', '--do_train', 'false', '--do_val', 'false', '--do_test', 'false', '--do_pred', 'true', '--train_set', './datasets/squad_qg//train.tsv', '--dev_set', './datasets/squad_qg//dev.tsv', '--test_set', './datasets/squad_qg//test.tsv', '--pred_set', './datasets/squad_qg//text.tsv', '--epoch', '10', '--tokenizer', 'FullTokenizer', '--tokenized_input', 'false', '--task_type', 'normal', '--role_type_size', '0', '--turn_type_size', '0', '--max_src_len', '512', '--max_tgt_len', '96', '--max_dec_len', '48', '--hidden_dropout_prob', '0.1', '--attention_probs_dropout_prob', '-1', '--random_noise', 'true', '--noise_prob', '0.7', '--continuous_position', 'true', '--tgt_type_id', '3', '--batch_size', '4', '--learning_rate', '5e-5', '--lr_scheduler', 'linear_warmup_decay', '--warmup_proportion', '0.1', '--weight_decay', '0.01', '--weight_sharing', 'True', '--label_smooth', '0.1', '--do_decode', 'true', '--beam_size', '5', '--length_penalty', '1.0', '--init_pretraining_params', 'ernie_gen_base/params', '--vocab_path', 'ernie_gen_base/vocab.txt', '--ernie_config_path', 'ernie_gen_base/ernie_config.json', '--checkpoints', './checkpoints', '--save_and_valid_by_epoch', 'true', '--eval_script', 'bash', './eval/tasks/squad_qg/eval.sh', '--eval_mertrics', 'Bleu_4,METEOR,ROUGE_L', '--random_seed', '43697']
+------------------------------------------------
+all_trainer_endpoints:  172.17.0.2:6170 , node_id:  0 , current_ip:  172.17.0.2 , num_nodes:  1 , node_ips:  ['172.17.0.2'] , gpus_per_proc:  1 , selected_gpus_per_proc:  [[0]] , nranks:  1
+proc 0 finsh

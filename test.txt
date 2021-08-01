@@ -1,0 +1,1 @@
+curl -d '[{"answer": "game","context": "A game is a structured form of play, usually undertaken for entertainment or fun, and sometimes used as an educational tool."}]' -H "Content-Type: application/json" -X POST http://127.0.0.1:8090/generate
